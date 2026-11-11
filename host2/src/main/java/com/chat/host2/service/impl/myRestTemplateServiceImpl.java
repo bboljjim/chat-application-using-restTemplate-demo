@@ -7,10 +7,24 @@ import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 import org.springframework.web.util.UriComponentsBuilder;
 
-import com.chat.host2.service.RestTemplateService;
+import com.chat.host2.service.myRestTemplateService;
 
 @Service
-public class RestTemplateServiceImpl implements RestTemplateService {
+public class myRestTemplateServiceImpl implements myRestTemplateService {
+    
+    @Override 
+    public boolean requestConnection(){
+        URI uri = UriComponentsBuilder
+            .fromUriString("http://localhost:8080")
+            .path("/host1/response-connection")
+            .encode()
+            .build()
+            .toUri();
+
+        RestTemplate restTemplate = new RestTemplate();
+        ResponseEntity<Boolean> responseEntity = restTemplate.getForEntity(uri, Boolean.class);
+        return responseEntity.getBody();
+    }
 
     @Override 
     public String requestMSG(){

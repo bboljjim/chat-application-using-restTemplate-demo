@@ -7,10 +7,10 @@ import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 import org.springframework.web.util.UriComponentsBuilder;
 
-import com.chat.host1.service.RestTemplateService;
+import com.chat.host1.service.myRestTemplateService;
 
 @Service 
-public class RestTemplateServiceImpl implements RestTemplateService{
+public class myRestTemplateServiceImpl implements myRestTemplateService{
 
     @Override 
     public boolean requestConnection(){

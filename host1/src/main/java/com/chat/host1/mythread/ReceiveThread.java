@@ -1,15 +1,15 @@
 package com.chat.host1.mythread;
 
 import com.chat.host1.data.ChatBox;
-import com.chat.host1.service.RestTemplateService;
+import com.chat.host1.service.myRestTemplateService;
 
 public class ReceiveThread extends Thread{
 
-    private RestTemplateService restTemplateService;
+    private myRestTemplateService restTemplateService;
     private ChatBox receiveBox;
     private String receiveMsg;
 
-    public ReceiveThread(RestTemplateService restTemplateService, ChatBox receiveBox){
+    public ReceiveThread(myRestTemplateService restTemplateService, ChatBox receiveBox){
         this.restTemplateService = restTemplateService;
         this.receiveBox = receiveBox;
         this.receiveMsg = new String();

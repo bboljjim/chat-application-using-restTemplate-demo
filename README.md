@@ -1,5 +1,5 @@
 # 1. 프로젝트 간단 소개
-<br>Spring Boot, RestTemplate를 활용해 구현한 아주 간단한 채팅 애플리케이션 데모 버전입니다 😅<br><br>
+<br>Spring Boot, RestTemplate를 활용해 구현한 아주 간단한 채팅 애플리케이션 데모 버전입니다 😓<br><br>
 이 프로젝트의 디렉토리 구조는<br>
 한 개의 최상위 폴더(chat-application-using-restTemplate-demo) 안에<br>
 두 개의 Spring Boot 프로젝트 폴더(host1, host2) 로 구성 되어있습니다.

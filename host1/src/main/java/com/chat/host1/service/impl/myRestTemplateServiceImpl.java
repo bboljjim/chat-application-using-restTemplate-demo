@@ -39,6 +39,5 @@ public class myRestTemplateServiceImpl implements myRestTemplateService{
         ResponseEntity<String> responseEntity = restTemplate.getForEntity(uri, String.class);
 
         return responseEntity.getBody();
-
     }
 }

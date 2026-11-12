@@ -33,11 +33,11 @@ public class MainController {
     public void preRequestConnection() {
         String input;
 
-        System.out.println("세션을 연결하시겠습니까? y/n");
+        System.out.println("채팅을 연결하시겠습니까? y/n");
         input = scanner.nextLine();
         if(input.equals("y") || input.equals("yes"))
-            if(requestConnection()) System.out.println("세션에 연결되었습니다. 채팅을 시작하세요.\n");
-            else System.out.println("세션 연결이 거부되었습니다.\n");
+            if(requestConnection()) System.out.println("채팅방에 연결되었습니다. 채팅을 시작하세요.\n");
+            else System.out.println("채팅방 연결이 거부되었습니다.\n");
         else System.out.println("프로그램을 종료합니다.\n");
     }
     
@@ -58,11 +58,11 @@ public class MainController {
 
     @GetMapping("/response-connection")
     public boolean preResponseConnection() {
-        System.out.println("연결 요청이 왔습니다. 연결하시겠습니까? y/n");
+        System.out.println("채팅방 연결 요청이 왔습니다. 연결하시겠습니까? y/n");
         String input = scanner.nextLine();
         if(input.equals("y") || input.equals("yes")){
             responseConnection();
-            System.out.println("연결을 승인하셨습니다. 채팅을 시작하세요.\n");
+            System.out.println("채팅방에 연결되었습니다. 채팅을 시작하세요.\n");
             return true;
         }
         System.out.println("연결을 거부하셨습니다.\n");
